@@ -22,9 +22,7 @@ $(() => {
         $('#sprite').attr('src', data.sprites.front_default)
         $('#name').html(data.name);
         $('#weight').html(data.weight);
-        // error results if there is more than one type
         $('#type').html(data.types[0].type.name);
-        // $('#type').html(data.types[1].type.name);
         () => {
             console.log('bad request');
         }
