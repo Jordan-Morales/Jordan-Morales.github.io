@@ -1,2 +1,6 @@
-# pokedex-plus
-A pokedex with more features to come later.
+#Main-Folder
+
+// Contents
+////////////
+// 1.
+//// Pokedex-Plus
