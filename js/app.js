@@ -11,7 +11,7 @@ $(() => {
         url: "https://pokeapi.co/api/v2/pokemon/"+$userInput
       }).then(
         (data) => {
-          console.log(data.moves);
+          // console.log(data.moves);
           //pulls data of name, weight, and first type (need a loop for multiple types as they share an array)
           // loop example
           // let $moves = data.moves;

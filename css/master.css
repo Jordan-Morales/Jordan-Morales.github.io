@@ -3,3 +3,14 @@
 }
 tested working
 */
+* {
+  border: grey 1px solid;
+}
+.display {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.containerBeta {
+  height: 30px;
+}
