@@ -5,7 +5,8 @@ $(() => {
 
   $('input[type="submit"]').click(() => {
     let $userInput = $('input[type="text"]').val();
-
+    //query is case-sensitive
+    $userInput = $userInput.toLowerCase();
     event.preventDefault(); // required
     // currently ajax is now dependant on input to determine query
       $.ajax({
@@ -21,7 +22,9 @@ $(() => {
         $('#sprite').attr('src', data.sprites.front_default)
         $('#name').html(data.name);
         $('#weight').html(data.weight);
-        $('#type').html(data.types[1].type.name);
+        // error results if there is more than one type
+        $('#type').html(data.types[0].type.name);
+        // $('#type').html(data.types[1].type.name);
         () => {
             console.log('bad request');
         }
