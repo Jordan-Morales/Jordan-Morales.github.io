@@ -11,49 +11,61 @@
     <title></title>
   </head>
   <body>
-    <form class="dataInput">
-      <input type="text" name="pokeSel" placeholder="Pokemon Name or Number">
-      <input type="submit" name="go" value="GO!">
-    </form>
-    <button type="button" name="prev" id='prev'>PREV</button>
-    <div class="display">
-      <div class="containerPrime">
-        <div id="spriteDisplay">
-          <img id="sprite">
-          </img>
-        </div>
-        Number:
-        <div id="id">
-
-        </div>
-        Name:
-        <div id="name">
-        </div>
-        Height:
-        <div id="height">
-
-        </div>
-        Weight:
-        <div id="weight">
-        </div>
-        Type:
-        <div id="type">
-        </div>
-      </div>
-
-      <div class="containerBeta">
-
-        <div class="additionalInfo">
-          <h6>List of Additional Stats:</h6>
-          Growth Rate:
-          <div id="growthRate">
+    <div class="containAll">
+      <header>
+        <form class="dataInput">
+          <input type="text" name="pokeSel" placeholder="Pokemon Name or Number">
+          <input type="submit" name="go" value="GO!">
+        </form>
+      </header>
+      <button type="button" name="prev" id='prev'>PREV</button>
+      <div class="display">
+          <div id="spriteDisplay">
+            <img id="sprite">
+            </img>
           </div>
-          <!-- <div class="move1">
-          </div> -->
+        <div class="containerPrime">
+          <div class="row" id="Row1">
+            <p>Number:</p>
+            <div id="id">
+            </div>
+          </div>
+          <div class="row" id="Row2">
+            <p>Name:</p>
+            <div id="name">
+            </div>
+          </div>
+          <div class="row" id="Row3">
+            <p>Height:</p>
+            <div id="height">
+            </div>
+          </div>
+          <div class="row" id="Row4">
+            <p>Weight:</p>
+            <div id="weight">
+            </div>
+          </div>
+          <div class="row" id="Row5">
+            <p>Type:</p>
+            <div id="type">
+            </div>
+          </div>
+        </div>
+
+        <div class="containerBeta">
+
+          <div class="additionalInfo">
+            <h6>List of Additional Stats:</h6>
+            Growth Rate:
+            <div id="growthRate">
+            </div>
+            <!-- <div class="move1">
+            </div> -->
+          </div>
         </div>
       </div>
+      <button type="button" name="next" id='next'>NEXT</button>
     </div>
-    <button type="button" name="next" id='next'>NEXT</button>
   </body>
 </html>
 

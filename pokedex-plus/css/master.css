@@ -4,8 +4,16 @@
 tested working
 */
 body {
-  width: 40%;
+  width: 100%;
   background-image: url(../img/pokeball-background2.png);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.containAll {
+  width: 40%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -21,9 +29,15 @@ form {
 }
 button {
   display: none;
+  width: 10%;
+  padding: 2%;
+}
+header {
+  width: 100%;
+  text-align: center;
 }
 .display {
-  width: 200px;
+  width: 75%;
   display: flex;
   flex-direction: column;
   background-color: grey;
@@ -32,8 +46,9 @@ button {
 .containerPrime{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  font-size: 2em;
 }
 #spriteDisplay {
   background-image: url(../img/image-background.png);
@@ -45,7 +60,8 @@ button {
   width: 100%;
 }
 #name, #height, #weight, #type, #id {
-  width: 60%
+  border: none;
+  margin-right: 20%;
 }
 #name, #type, #growthRate {
   text-transform: capitalize;
@@ -58,6 +74,15 @@ button {
   height: 100%
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.row > p {
+  margin: 0;
+  margin-left: 10%;
+  border: none;
+}
 /* graveyard
 
 
