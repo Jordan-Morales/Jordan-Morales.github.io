@@ -44,7 +44,9 @@ let $curID = parseInt($('#id').text());
         () => {
             console.log('bad request');
         }
-        $('button').show();
+        $('#spriteDisplay').show(400);
+        $('button').show('slow');
+        $('#sprite').slideDown(400);
       })
   }); //closing input click
 
