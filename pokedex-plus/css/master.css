@@ -4,10 +4,17 @@
 tested working
 */
 body {
+  width: 40%;
   background-image: url(../img/pokeball-background2.png);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
 form {
   background-color: grey;
+  width: 100%;
 }
 * {
   border: red 2px solid;
@@ -20,6 +27,7 @@ button {
   display: flex;
   flex-direction: column;
   background-color: grey;
+
 }
 .containerPrime{
   display: flex;
@@ -27,12 +35,22 @@ button {
   flex-direction: row;
   justify-content: space-between;
 }
-#sprite {
+#spriteDisplay {
+  background-image: url(../img/image-background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#spriteDisplay, #sprite {
   width: 100%;
 }
 #name, #height, #weight, #type, #id {
   width: 60%
 }
+#name, #type, #growthRate {
+  text-transform: capitalize;
+}
+
 .containerBeta {
   height: 100%;
 }

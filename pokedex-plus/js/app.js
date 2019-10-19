@@ -2,6 +2,7 @@ $(() => {
 
 // functions
 const growth = () => {
+  // growth and some other data uses the /pokemon-species url
 let $curID = parseInt($('#id').text());
   $.ajax({
     url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
