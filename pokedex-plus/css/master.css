@@ -40,7 +40,7 @@ input[type=submit] {
   font-size: 1.6vw;
   display: flex;
   justify-content: center;
-  padding: 16px 16px;
+  padding: 10px 10px;
 }
 
 /* * {
