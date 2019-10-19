@@ -137,14 +137,16 @@ header {
 
 
 /* Resposive Design */
+/* Not working yet*/
 
+/*
 @media (min-width: 520px) {
 
   body {
   height: 100%;
   background-color: blue;
   }
-}
+} */
 
 
 /* graveyard
