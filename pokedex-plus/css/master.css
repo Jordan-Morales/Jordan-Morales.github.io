@@ -22,34 +22,60 @@ body {
   border: none;
 }
 form {
-  background-color: grey;
+  background-color: darkred;
   width: 100%;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
 }
-* {
+input[type=text] {
+  width: 40%;
+  font-size: 1.6vw;
+  text-align: center;
+}
+input[type=submit] {
+  width: 20%;
+  font-size: 1.6vw;
+  display: flex;
+  justify-content: center;
+  padding: 16px 16px;
+}
+
+/* * {
   border: red 2px solid;
-}
+} */
 button {
   display: none;
+  margin: 0;
   width: 10%;
   padding: 2%;
+  background-color: darkred;
+  color: white;
+  border-radius: 12px;
 }
 header {
-  width: 100%;
+  width: 95%;
   text-align: center;
 }
 .display {
   width: 75%;
   display: flex;
   flex-direction: column;
-  background-color: grey;
+  background-color: lightgrey;
+  border: red 2px solid;
+  border-radius: 12px;
 
 }
 .containerPrime{
+  border: red 2px solid;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 2em;
+  font-size: 4vw;
 }
 #spriteDisplay {
   background-image: url(../img/image-background.png);
@@ -83,6 +109,7 @@ header {
 }
 
 .row {
+  border: red 2px solid;
   display: flex;
   justify-content: space-between;
 }
@@ -107,6 +134,18 @@ header {
   border: none;
   text-align: left;
 }
+
+
+/* Resposive Design */
+
+@media (min-width: 520px) {
+
+  body {
+  height: 100%;
+  background-color: blue;
+  }
+}
+
 
 /* graveyard
 
