@@ -1,5 +1,21 @@
 $(() => {
 
+// functions
+const growth = () => {
+let $curID = parseInt($('#id').text());
+  $.ajax({
+    url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
+  }).then((data) => {
+    console.log(data);
+    $('#growthRate').html(data.growth_rate.name),
+  () => {
+      console.log('bad request');
+    }
+  })
+}
+
+
+
   $('input[type="submit"]').click(() => {
     let $userInput = $('input[type="text"]').val();
     //query is case-sensitive
@@ -14,23 +30,67 @@ $(() => {
           // console.log(data.moves);
           //pulls data of name, weight, and first type (need a loop for multiple types as they share an array)
           // loop example
-          // let $moves = data.moves;
-          //   for (var i = 0; i < $moves.length; i++) {
-          //     console.log($moves[i].move.name);
-          //   }
+            // for (var i = 0; i < 4; i++) {
+            //   let move = $moves[i].move.name;
+            // }
         $('#sprite').attr('src', data.sprites.front_default)
+        $('#id').html(data.id);
         $('#name').html(data.name);
+        $('#height').html(data.height);
         $('#weight').html(data.weight);
+        growth();
         $('#type').html(data.types[0].type.name);
-        $('#move0').html(data.moves[0].move.name);
-          // example using loop
-          // $('#move1').html($moves[1].move.name);
+        // $('#move0').html(data.moves[0].move.name);
+        // $('#move1').html(data.moves[1].move.name);
         () => {
             console.log('bad request');
         }
+        $('button').show();
       })
   }); //closing input click
+
+
+  $('#prev').click(() => {
+    let n = parseInt($('#id').text());
+    let $newID = (n - 1);
+    $.ajax({
+      url: "https://pokeapi.co/api/v2/pokemon/"+$newID
+    }).then(
+      (data) => {
+      $('#sprite').attr('src', data.sprites.front_default)
+      $('#id').html(data.id);
+      $('#name').html(data.name);
+      $('#height').html(data.height);
+      $('#weight').html(data.weight);
+      growth();
+      $('#type').html(data.types[0].type.name);
+      () => {
+          console.log('bad request');
+      }
+  })
+  })
+  $('#next').click(() => {
+    let n = parseInt($('#id').text());
+    let $newID = (n + 1);
+
+    $.ajax({
+      url: "https://pokeapi.co/api/v2/pokemon/"+$newID
+    }).then(
+      (data) => {
+      $('#sprite').attr('src', data.sprites.front_default)
+      $('#id').html(data.id);
+      $('#name').html(data.name);
+      $('#height').html(data.height);
+      $('#weight').html(data.weight);
+      growth();
+      $('#type').html(data.types[0].type.name);
+      () => {
+          console.log('bad request');
+      }
+  })
+  })
 }) //closing jquery
+
 
 
 

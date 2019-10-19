@@ -3,14 +3,39 @@
 }
 tested working
 */
+body {
+  background-image: url(../img/pokeball-background2.png);
+}
+form {
+  background-color: grey;
+}
 * {
-  border: grey 1px solid;
+  border: red 2px solid;
+}
+button {
+  display: none;
 }
 .display {
   width: 200px;
   display: flex;
   flex-direction: column;
+  background-color: grey;
+}
+.containerPrime{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#sprite {
+  width: 100%;
+}
+#name, #height, #weight, #type, #id {
+  width: 60%
 }
 .containerBeta {
-  height: 30px;
+  height: 100%;
+}
+.additionalInfo {
+  height: 100%
 }
