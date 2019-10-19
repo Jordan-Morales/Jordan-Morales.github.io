@@ -6,7 +6,6 @@ let $curID = parseInt($('#id').text());
   $.ajax({
     url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
   }).then((data) => {
-    console.log(data);
     $('#growthRate').html(data.growth_rate.name),
   () => {
       console.log('bad request');
@@ -14,8 +13,7 @@ let $curID = parseInt($('#id').text());
   })
 }
 
-
-
+// Primary submit
   $('input[type="submit"]').click(() => {
     let $userInput = $('input[type="text"]').val();
     //query is case-sensitive
@@ -49,7 +47,7 @@ let $curID = parseInt($('#id').text());
       })
   }); //closing input click
 
-
+// button to go backwards
   $('#prev').click(() => {
     let n = parseInt($('#id').text());
     let $newID = (n - 1);
@@ -69,6 +67,7 @@ let $curID = parseInt($('#id').text());
       }
   })
   })
+// button to go forwards
   $('#next').click(() => {
     let n = parseInt($('#id').text());
     let $newID = (n + 1);
@@ -90,9 +89,6 @@ let $curID = parseInt($('#id').text());
   })
   })
 }) //closing jquery
-
-
-
 
 
 // graveyard
