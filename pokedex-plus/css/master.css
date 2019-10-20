@@ -21,6 +21,9 @@ body {
   justify-content: center;
   border: none;
 }
+header {
+  position: fixed;
+}
 form {
   background-color: darkred;
   width: 100%;

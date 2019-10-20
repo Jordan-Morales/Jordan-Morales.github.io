@@ -9,8 +9,8 @@ $(() => {
   //   }
   // })
 
-// functions
-const growth = () => {
+//////////////////////////////////// Functions
+const extendedData = () => {
   // growth and some other data uses the /pokemon-species url
 let $curID = parseInt($('#id').text());
   $.ajax({
@@ -25,15 +25,27 @@ let $curID = parseInt($('#id').text());
 const types = (data) => {
   $('#type2').empty();
   if (data.types.length === 1) {
-  $('#type').html(data.types[0].type.name);
+    $('#type').html(data.types[0].type.name);
   }
   else {
-  $('#type').html(data.types[0].type.name);
-  $('#type2').html(data.types[1].type.name);
+    $('#type').html(data.types[0].type.name);
+    $('#type2').html(data.types[1].type.name);
   }
 }
+const heightWeight = (data) => {
+  $('#height').html(data.height);
+  let $height = parseInt($('#height').text());
+  $height = ($height / 10)
+  $('#height').empty()
+  $('#height').text($height)
 
-// Playing with Type Colors
+  $('#weight').html(data.weight);
+  let $weight = parseInt($('#weight').text());
+  $weight = ($weight / 10)
+  $('#weight').empty()
+  $('#weight').text($weight)
+}
+/////////////////////////////////// Playing with Type Colors
 
 // Trying to modify background behind type to become coloured depending on pl
 // const colored = () => {
@@ -63,7 +75,7 @@ const types = (data) => {
 
 
 
-// Primary submit
+///////////////////////////////////// Primary submit
   $('input[type="submit"]').click(() => {
     let $userInput = $('input[type="text"]').val();
     //query is case-sensitive
@@ -86,9 +98,9 @@ const types = (data) => {
         $('#name').html(data.name);
         $('#height').html(data.height);
         $('#weight').html(data.weight);
-        growth();
+        extendedData();
         types(data);
-
+        heightWeight(data);
         // $('#move0').html(data.moves[0].move.name);
         // $('#move1').html(data.moves[1].move.name);
         () => {
@@ -100,7 +112,7 @@ const types = (data) => {
       })
   }); //closing input click
 
-// button to go backwards
+/////////////////////////////////// button to go backwards
   $('#prev').click(() => {
     let $newID = parseInt($('#id').text());
       if ($newID == 1) {
@@ -119,15 +131,16 @@ const types = (data) => {
       $('#name').html(data.name);
       $('#height').html(data.height);
       $('#weight').html(data.weight);
-      growth();
+      extendedData();
       types(data);
+      heightWeight(data);
 
       () => {
           console.log('bad request');
       }
   })
   })
-// button to go forwards
+///////////////////////////////////// button to go forwards
   $('#next').click(() => {
     let $newID = parseInt($('#id').text());
       if ($newID == 807) {
@@ -145,8 +158,10 @@ const types = (data) => {
         $('#name').html(data.name);
         $('#height').html(data.height);
         $('#weight').html(data.weight);
-        growth();
+        extendedData();
         types(data);
+        heightWeight(data);
+
         () => {
             console.log('bad request');
         }
@@ -160,10 +175,10 @@ const types = (data) => {
 
 
 
-}) //closing jquery
+}) ////////////closing jquery on document load
 
 
-//// graveyard
+//////////////////////////////// graveyard
 //using to determing placement as docs aren't on point
 
 // ALL QUERY URLS:
