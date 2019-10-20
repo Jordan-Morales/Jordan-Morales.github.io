@@ -15,7 +15,8 @@ let $curID = parseInt($('#id').text());
   $.ajax({
     url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
   }).then((data) => {
-    $('#growthRate').html(data.growth_rate.name),
+    $('#growthRate').html(data.growth_rate.name);
+    $('#flavorText').html(data.flavor_text_entries[2].flavor_text);
   () => {
       console.log('bad request');
     }
@@ -76,9 +77,8 @@ const heightWeight = (data) => {
 
 ///////////////////////////////////// Primary submit
   $('input[type="submit"]').click(() => {
-    let $userInput = $('input[type="text"]').val();
+    let $userInput = $('input[type="text"]').val().toLowerCase();
     //query is case-sensitive
-    $userInput = $userInput.toLowerCase();
     event.preventDefault(); // required
     // currently ajax is now dependant on input to determine query
       $.ajax({
