@@ -9,6 +9,10 @@
 * JavaScript
 * jQuery
 
+## Resources
+
+* PokeAPI
+
 ## Intial functions:
 * Search by Pokemon Number - check
 * Search by Pokemon Name - check
