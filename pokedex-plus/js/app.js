@@ -16,7 +16,8 @@ let $curID = parseInt($('#id').text());
     url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
   }).then((data) => {
     $('#growthRate').html(data.growth_rate.name);
-    $('#flavorText').html(data.flavor_text_entries[2].flavor_text);
+    // $('#flavorText').html(data.flavor_text_entries[2].flavor_text);
+    // languages aren't in same order throughout array. This could be an issue.
   () => {
       console.log('bad request');
     }
