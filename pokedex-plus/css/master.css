@@ -3,6 +3,7 @@
 }
 tested working
 */
+
 body {
   width: 100%;
   background-image: url(../img/pokeball-background2.png);
@@ -19,7 +20,10 @@ body {
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  border: none;
+  border: darkred 20px solid;
+  margin-top: 2.8vw;
+  background-color: darkred;
+  box-shadow: 5px 10px 8px;
 }
 header {
   position: fixed;
@@ -55,8 +59,16 @@ button {
   width: 10%;
   padding: 2%;
   background-color: darkred;
-  color: white;
   border-radius: 12px;
+  border: black;
+}
+#prev > img {
+  height: 20%;
+  width: 100%;
+}
+#next > img {
+  height: 20%;
+  width: 100%;
 }
 header {
   height: 4vw;
@@ -68,12 +80,12 @@ header {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border: red 2px solid;
+  /* border: red 5px solid; */
   border-radius: 12px;
 
 }
 .containerPrime{
-  border: red 2px solid;
+  /* border: red 2px solid; */
 
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +129,7 @@ header {
 }
 
 .row {
-  border: red 2px solid;
+  border: lightgrey 1px groove;
   display: flex;
   justify-content: space-between;
 }

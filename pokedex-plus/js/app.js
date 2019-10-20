@@ -1,5 +1,4 @@
 $(() => {
-
   // $.ajax({
   //   url: "https://pokeapi.co/api/v2/evolution-chain/2/"
   // }).then((data) => {
@@ -105,6 +104,7 @@ const heightWeight = (data) => {
             console.log('bad request');
         }
         $('#spriteDisplay').show(400);
+        $('#display').show(300)
         $('button').show('slow');
         $('#sprite').slideDown(400);
       })
