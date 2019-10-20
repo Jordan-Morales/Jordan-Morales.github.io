@@ -104,6 +104,8 @@ const heightWeight = (data) => {
         () => {
             console.log('bad request');
         }
+        // $('#pokedexCover').css("visibility", "hidden")
+        // $('#containAll').css('visibility' , 'visible')
         $('#spriteDisplay').show(400);
         $('#display').show(300)
         $('button').show('slow');

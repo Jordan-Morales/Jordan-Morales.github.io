@@ -3,7 +3,6 @@
 }
 tested working
 */
-
 body {
   width: 100%;
   background-image: url(../img/pokeball-background2.png);
@@ -13,6 +12,12 @@ body {
   align-content: center;
   justify-content: center;
 }
+/* #pokedexCover {
+  margin-top: 10vw;
+  height: 100%;
+  width: 100%;
+} */
+
 .containAll {
   width: 80%;
   display: flex;
@@ -24,6 +29,7 @@ body {
   margin-top: 8vw;
   background-color: darkred;
   box-shadow: 5px 10px 8px;
+  /* visibility: hidden; */
 }
 header {
   position: fixed;
@@ -91,7 +97,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 4vw;
+  font-size: 6vw;
 }
 #spriteDisplay {
   background-image: url(../img/image-background.png);
@@ -123,6 +129,7 @@ header {
 
 .containerBeta {
   height: 100%;
+  font-size: 6vw;
 }
 .additionalInfo {
   height: 100%
