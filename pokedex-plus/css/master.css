@@ -64,7 +64,7 @@ header {
   width: 75%;
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
+  background-color: white;
   border: red 2px solid;
   border-radius: 12px;
 
@@ -88,17 +88,21 @@ header {
   width: 100%;
   display: none;
 }
-#name, #type, #id {
+#name, #id {
   border: none;
   margin-right: 30%;
 }
+#type, #type2 {
+  border: none;
 
-#height, #weight {
+}
+
+#height, #weight, #type2 {
   border: none;
   margin-right: 10%;
   text-align: center;
 }
-#name, #type, #growthRate {
+#name, #type, #type2, #growthRate {
   text-transform: capitalize;
 }
 

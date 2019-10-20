@@ -22,6 +22,46 @@ let $curID = parseInt($('#id').text());
     }
   })
 }
+const types = (data) => {
+  $('#type2').empty();
+  if (data.types.length === 1) {
+  $('#type').html(data.types[0].type.name);
+  }
+  else {
+  $('#type').html(data.types[0].type.name);
+  $('#type2').html(data.types[1].type.name);
+  }
+}
+
+// Playing with Type Colors
+
+// Trying to modify background behind type to become coloured depending on pl
+// const colored = () => {
+// let type1 = $('#type').value;
+// if (type1 === "normal") {
+// $('#type').css('background-color', 'grey')
+// } else if (type1 === "flying") {
+// $('#type').css('background-color', 'purple')
+// }
+//
+// switch (type1) {
+//   case 'normal':
+//     $('#type').css('background-color', 'grey')
+//     break;
+//   case 'fighting':
+//     $('#type').css('background-color', 'red')
+//     break;
+//   case 'flying':
+//     $('#type').css('background-color', 'purple')
+//     break;
+//   default:
+// }
+// }
+
+
+
+
+
 
 // Primary submit
   $('input[type="submit"]').click(() => {
@@ -47,13 +87,7 @@ let $curID = parseInt($('#id').text());
         $('#height').html(data.height);
         $('#weight').html(data.weight);
         growth();
-        $('#type').html(data.types[0].type.name);
-        if (data.includes(data.types[1].type.name)) {
-        $('#type2').html(data.types[1].type.name);
-        }
-        // else {
-        //   $('#type2').empty()
-        // }
+        types(data);
 
         // $('#move0').html(data.moves[0].move.name);
         // $('#move1').html(data.moves[1].move.name);
@@ -68,28 +102,13 @@ let $curID = parseInt($('#id').text());
 
 // button to go backwards
   $('#prev').click(() => {
-    let n = parseInt($('#id').text());
-    let $newID = (n - 1);
-    $.ajax({
-      url: "https://pokeapi.co/api/v2/pokemon/"+$newID
-    }).then(
-      (data) => {
-      $('#sprite').attr('src', data.sprites.front_default)
-      $('#id').html(data.id);
-      $('#name').html(data.name);
-      $('#height').html(data.height);
-      $('#weight').html(data.weight);
-      growth();
-      $('#type').html(data.types[0].type.name);
-      () => {
-          console.log('bad request');
+    let $newID = parseInt($('#id').text());
+      if ($newID == 1) {
+        $newID = 808
+        $newID = ($newID - 1);
+      } else {
+        $newID = ($newID - 1);
       }
-  })
-  })
-// button to go forwards
-  $('#next').click(() => {
-    let n = parseInt($('#id').text());
-    let $newID = (n + 1);
 
     $.ajax({
       url: "https://pokeapi.co/api/v2/pokemon/"+$newID
@@ -101,12 +120,42 @@ let $curID = parseInt($('#id').text());
       $('#height').html(data.height);
       $('#weight').html(data.weight);
       growth();
-      $('#type').html(data.types[0].type.name);
+      types(data);
+
       () => {
           console.log('bad request');
       }
-      })
+  })
+  })
+// button to go forwards
+  $('#next').click(() => {
+    let $newID = parseInt($('#id').text());
+      if ($newID == 807) {
+        $newID = 0
+        $newID = ($newID + 1);
+      } else {
+        $newID = ($newID + 1);
+      }
+      $.ajax({
+        url: "https://pokeapi.co/api/v2/pokemon/"+$newID
+      }).then(
+        (data) => {
+        $('#sprite').attr('src', data.sprites.front_default)
+        $('#id').html(data.id);
+        $('#name').html(data.name);
+        $('#height').html(data.height);
+        $('#weight').html(data.weight);
+        growth();
+        types(data);
+        () => {
+            console.log('bad request');
+        }
+        })
+
   }) // end of forward button function
+
+
+
 
 
 
