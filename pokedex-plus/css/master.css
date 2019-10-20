@@ -34,6 +34,7 @@ body {
 header {
   position: fixed;
 }
+
 form {
   background-color: darkred;
   width: 100%;
@@ -92,7 +93,6 @@ header {
 }
 .containerPrime{
   /* border: red 2px solid; */
-
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -166,14 +166,43 @@ header {
 /* Resposive Design */
 /* Not working yet*/
 
-/*
+
 @media (min-width: 520px) {
 
   body {
-  height: 100%;
+  width: 60%;
   background-color: blue;
   }
-} */
+  header {
+    height: 3vw;
+  }
+  form {
+    height: 4vw;
+  }
+  input[type=text] {
+    font-size: 1.6vw;
+  }
+  input[type=submit] {
+    font-size: 1.6vw;
+  }
+  .display {
+    width: 55%;
+  }
+  .containAll{
+    margin-top: 2.6vw;
+    border: 4px;
+    align-self: center;
+  }
+  .containerPrime{
+    font-size: 1.4vw;
+  }
+  .containerBeta{
+    font-size: 1.4vw;
+  }
+  button {
+    border-radius: 4px;
+  }
+}
 
 
 /* graveyard
