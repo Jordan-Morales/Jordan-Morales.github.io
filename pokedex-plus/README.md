@@ -11,7 +11,7 @@
 
 ## Resources
 
-*PokeAPI
+* PokeAPI
 
 ## Intial functions:
 * Search by Pokemon Number - check
