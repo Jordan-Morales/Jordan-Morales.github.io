@@ -48,6 +48,13 @@ let $curID = parseInt($('#id').text());
         $('#weight').html(data.weight);
         growth();
         $('#type').html(data.types[0].type.name);
+        if (data.includes(data.types[1].type.name)) {
+        $('#type2').html(data.types[1].type.name);
+        }
+        // else {
+        //   $('#type2').empty()
+        // }
+
         // $('#move0').html(data.moves[0].move.name);
         // $('#move1').html(data.moves[1].move.name);
         () => {
@@ -98,8 +105,12 @@ let $curID = parseInt($('#id').text());
       () => {
           console.log('bad request');
       }
-  })
-  })
+      })
+  }) // end of forward button function
+
+
+
+
 }) //closing jquery
 
 
