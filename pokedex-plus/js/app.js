@@ -96,8 +96,6 @@ const heightWeight = (data) => {
         $('#sprite').attr('src', data.sprites.front_default)
         $('#id').html(data.id);
         $('#name').html(data.name);
-        $('#height').html(data.height);
-        $('#weight').html(data.weight);
         extendedData();
         types(data);
         heightWeight(data);
@@ -129,8 +127,6 @@ const heightWeight = (data) => {
       $('#sprite').attr('src', data.sprites.front_default)
       $('#id').html(data.id);
       $('#name').html(data.name);
-      $('#height').html(data.height);
-      $('#weight').html(data.weight);
       extendedData();
       types(data);
       heightWeight(data);
@@ -156,8 +152,6 @@ const heightWeight = (data) => {
         $('#sprite').attr('src', data.sprites.front_default)
         $('#id').html(data.id);
         $('#name').html(data.name);
-        $('#height').html(data.height);
-        $('#weight').html(data.weight);
         extendedData();
         types(data);
         heightWeight(data);
