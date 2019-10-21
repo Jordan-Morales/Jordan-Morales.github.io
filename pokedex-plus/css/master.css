@@ -176,6 +176,7 @@ header {
 @media (min-width: 520px) {
   body {
   width: 80%;
+  margin-left: 15%;
   }
   header {
     height: 4vw;
@@ -212,6 +213,7 @@ header {
 @media (min-width: 990px) {
   body {
   width: 60%;
+  margin-left: 20%;
   }
   header {
     height: 3vw;
