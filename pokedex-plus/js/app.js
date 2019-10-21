@@ -16,8 +16,6 @@ let $curID = parseInt($('#id').text());
     url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
   }).then((data) => {
     $('#growthRate').html(data.growth_rate.name);
-    // $('#flavorText').html(data.flavor_text_entries[2].flavor_text);
-    // languages aren't in same order throughout array. This could be an issue.
   () => {
       console.log('bad request');
     }
@@ -88,24 +86,15 @@ const heightWeight = (data) => {
       }).then(
         (data) => {
           // console.log(data.moves);
-          //pulls data of name, weight, and first type (need a loop for multiple types as they share an array)
-          // loop example
-            // for (var i = 0; i < 4; i++) {
-            //   let move = $moves[i].move.name;
-            // }
         $('#sprite').attr('src', data.sprites.front_default)
         $('#id').html(data.id);
         $('#name').html(data.name);
         extendedData();
         types(data);
         heightWeight(data);
-        // $('#move0').html(data.moves[0].move.name);
-        // $('#move1').html(data.moves[1].move.name);
         () => {
             console.log('bad request');
         }
-        // $('#pokedexCover').css("visibility", "hidden")
-        // $('#containAll').css('visibility' , 'visible')
         $('#spriteDisplay').show(400);
         $('#display').show(300)
         $('button').show('slow');
@@ -174,9 +163,17 @@ const heightWeight = (data) => {
 
 }) ////////////closing jquery on document load
 
-
 //////////////////////////////// graveyard
-//using to determing placement as docs aren't on point
+
+// $('#pokedexCover').css("visibility", "hidden")
+// $('#containAll').css('visibility' , 'visible')
+
+// $('#flavorText').html(data.flavor_text_entries[2].flavor_text);
+// languages aren't in same order throughout array. This could be an issue.
+
+
+
+
 
 // ALL QUERY URLS:
 ////////////////////////////////////////////////////////
