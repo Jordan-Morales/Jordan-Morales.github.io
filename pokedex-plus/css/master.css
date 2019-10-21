@@ -35,6 +35,7 @@ body {
   align-content: center;
   justify-content: center;
   border: darkred 20px solid;
+  border-radius: 20px;
   margin-top: 8vw;
   background-color: darkred;
   box-shadow: 5px 10px 8px;
@@ -64,6 +65,8 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   padding: 10px 10px;
+  background-image: linear-gradient(red, black, white);
+  color: white;
 }
 
 /* * {
