@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="css/master.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -18,7 +19,8 @@
         <input type="text" name="pokeSel" placeholder="Pokemon Name or Number">
         <input type="submit" name="go" value="GO!">
         <div class="links">
-          <a href="map.html">
+          <p>World Map</p>
+          <a href="map.html" id="map">
             <ion-icon name="map" size="large"></ion-icon>
           </a>
         </div>
