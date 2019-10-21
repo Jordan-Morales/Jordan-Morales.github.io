@@ -47,6 +47,9 @@
 ## Data Locations within PokeAPI
 
 >Data locations with in the PokeAPI we not as straightforward as I hoped they would be.
+
+![!Image of Primary Code](https://github.com/Jordan-Morales/Jordan-Morales.github.io/blob/master/pokedex-plus/refImages/primarysubmit.png)
+
 >Each Pokémon has two different data points the follow matching IDs but contain a variety of different information.
 >Additionally, some Pokémon possess more than one type, I placed this in its own function and passes the query data through to this function, allowing my to create an if-else statement to sift through the data.
 
