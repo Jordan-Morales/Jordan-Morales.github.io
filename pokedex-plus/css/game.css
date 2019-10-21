@@ -1,0 +1,12 @@
+#map, #home {
+  color: black;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 10vw;
+}

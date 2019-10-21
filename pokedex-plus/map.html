@@ -3,16 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="css/second.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/alt.js" charset="utf-8"></script>
     <title>Pokeworld Map</title>
   </head>
   <body>
-    <img src="https://jordan-morales.github.io/pokedex-plus/img/PokeworldMap.png" alt="pokemon world map">
+    <div class="links">
+      <a href="index.html" id="home">
+        <ion-icon name="search" size="large"></ion-icon>
+      </a>
+      <a href="game.html" id="game">
+        <ion-icon name="logo-game-controller-a" size="large"></ion-icon>
+      </a>
+    </div>
+    <div class="mapSection">
+      <img src="https://jordan-morales.github.io/pokedex-plus/img/PokeworldMap.png" alt="pokemon world map">
+    </div>
   </body>
 </html>
