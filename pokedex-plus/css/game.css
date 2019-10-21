@@ -1,3 +1,8 @@
+img {
+  height: 15vw;
+  width: 15vw;
+}
+
 #map, #home {
   color: black;
   margin-top: 0;
@@ -9,4 +14,11 @@
   flex-direction: row;
   justify-content: center;
   margin-left: 10vw;
+}
+
+
+/* this will filter image to be a solid black, making it useable for guess that pokemon*/
+#sprite {
+  filter: saturate(0%) brightness(40%) contrast(1500%);
+
 }

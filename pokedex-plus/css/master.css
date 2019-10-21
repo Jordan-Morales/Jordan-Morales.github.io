@@ -113,7 +113,6 @@ header {
   background-size: cover;
   background-position: center;
 }
-
 #spriteDisplay, #sprite {
   width: 100%;
   display: none;
