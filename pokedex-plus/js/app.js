@@ -1,12 +1,5 @@
 $(() => {
-  // $.ajax({
-  //   url: "https://pokeapi.co/api/v2/evolution-chain/2/"
-  // }).then((data) => {
-  //   console.log(data);
-  // () => {
-  //     console.log('bad request');
-  //   }
-  // })
+
 
 //////////////////////////////////// Functions
 const extendedData = () => {
@@ -171,7 +164,14 @@ const heightWeight = (data) => {
 // $('#flavorText').html(data.flavor_text_entries[2].flavor_text);
 // languages aren't in same order throughout array. This could be an issue.
 
-
+// $.ajax({
+//   url: "https://pokeapi.co/api/v2/evolution-chain/2/"
+// }).then((data) => {
+//   console.log(data);
+// () => {
+//     console.log('bad request');
+//   }
+// })
 
 
 
