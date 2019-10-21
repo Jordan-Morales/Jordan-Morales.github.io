@@ -18,8 +18,8 @@
 * Search by Pokemon Name - check
 * Traverse through Pokédex by ID number - check
 * Have various information displayed - check
-* Map page available with PokeWorld Map, no specific functionality.
-* 
+* Map page available with PokeWorld Map, no specific functionality - check
+* Game Page with basic function - check
 * additional features to come later
 
 
