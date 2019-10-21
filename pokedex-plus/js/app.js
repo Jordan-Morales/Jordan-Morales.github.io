@@ -70,6 +70,7 @@ const heightWeight = (data) => {
 ///////////////////////////////////// Primary submit
   $('input[type="submit"]').click(() => {
     let $userInput = $('input[type="text"]').val().toLowerCase();
+    $('input[type="text"]').val('');
     //query is case-sensitive
     event.preventDefault(); // required
     // currently ajax is now dependant on input to determine query
