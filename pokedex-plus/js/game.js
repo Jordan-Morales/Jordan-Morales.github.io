@@ -67,7 +67,6 @@ const game = () => {
 }
 
 game()
-// setTimeout(game,1000); // called for intial page load
 
 // click and win checks go down here
 // if user clicks name that matches

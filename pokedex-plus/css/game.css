@@ -1,7 +1,3 @@
-/* * {
-  border: 2px black solid;
-} */
-
 html {
   background-image: url(../img/pokeball-background2.png);
 }
@@ -49,15 +45,12 @@ button {
   font-size: 4vw;
 }
 
-
 /* this will filter image to be a solid black, making it useable for guess that pokemon*/
 #sprite {
   filter: saturate(0%) brightness(40%) contrast(1500%);
 }
 
 /* //Responsive Design */
-
-
 @media (min-width: 520px) {
   img {
     height: 15vw;
@@ -67,6 +60,8 @@ button {
     height: 6vw;
   }
 }
+
+/* Graveyard */
 /*
 @media (min-width: 850px) {
 
@@ -74,4 +69,7 @@ button {
 
 @media (min-width: 1350px) {
 
+} */
+/* * {
+  border: 2px black solid;
 } */

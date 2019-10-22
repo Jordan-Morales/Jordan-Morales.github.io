@@ -1,6 +1,5 @@
 $(() => {
 
-
 //////////////////////////////////// Functions
 const extendedData = () => {
   // growth and some other data uses the /pokemon-species url
@@ -75,11 +74,6 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
 // }
 // }
 
-
-
-
-
-
 ///////////////////////////////////// Primary submit
   $('input[type="submit"]').click(() => {
     let $userInput = $('input[type="text"]').val().toLowerCase();
@@ -101,7 +95,6 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
         () => {
             console.log('bad request');
         }
-
         let gone = () => {
           $('#pokedexCover').css({'opacity': '0', 'transition': 'opacity .3s'})
           setTimeout(() => {
@@ -126,7 +119,6 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
       } else {
         $newID = ($newID - 1);
       }
-
     $.ajax({
       url: "https://pokeapi.co/api/v2/pokemon/"+$newID
     }).then(
@@ -137,7 +129,6 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
       extendedData();
       types(data);
       heightWeight(data);
-
       () => {
           console.log('bad request');
       }
@@ -162,21 +153,14 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
         extendedData();
         types(data);
         heightWeight(data);
-
         () => {
             console.log('bad request');
         }
         })
-
   }) // end of forward button function
-
-
-
-
-
-
-
 }) ////////////closing jquery on document load
+
+
 
 //////////////////////////////// graveyard
 

@@ -1,6 +1,4 @@
-/* * {
-  border: 2px black solid;
-} */
+
 html {
   background-image: url(../img/pokeball-background2.png);
 
@@ -12,10 +10,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  /* margin-left: 0;
-  margin-right: 0;
-  margin: 0;
-  align-self: center; */
 }
 img {
   border: solid 5px black;
@@ -47,7 +41,7 @@ h3 {
   background-color: white;
 }
 
-// Responsive Design
+/* Graveyard */
 
 /* @media (min-width: 520px) {
 }
@@ -79,3 +73,10 @@ h3 {
 
   }
 } */
+/* * {
+  border: 2px black solid;
+} */
+/* margin-left: 0;
+margin-right: 0;
+margin: 0;
+align-self: center; */
