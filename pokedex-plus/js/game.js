@@ -13,6 +13,8 @@ $(() => {
   })
   }; // end of pokeRandom
 
+let $answer = '';
+
 // brought back my shuffle technique from the deck of card stretch w02d03
 const shuffle = () => {
   let currentIndex = optionArray.length;
@@ -29,8 +31,7 @@ const shuffle = () => {
 }
 
 //getting the other two options into the array
-pokeRandom();
-pokeRandom();
+
 
 // Function for the answer and two incorrect answers and pushing them to html
 const choice = () => {
@@ -43,26 +44,60 @@ const choice = () => {
 //primary random number and ajax for displayed pokeShadow
 //limiting to first 151 for my own sanity.
 // $primaryRanNum should remain the same so this could be used again, or a hidden element could contain the correct answer
-let $primaryRanNum = Math.floor(Math.random() * 150) + 1;
-$.ajax({
-  url: "https://pokeapi.co/api/v2/pokemon/"+$primaryRanNum
-}).then(
-  (data) => {
-  $('#sprite').attr('src', data.sprites.front_default);
-  $name = data.name;
-  optionArray.push($name);
-  () => {
-      console.log('bad request');
-  }
-})
+const game = () => {
 
-//Had to delay the choice function because I was getting some refreshes showing only 1 or 2 choices but the array was still getting them and by the time the log completed they were there.
-setTimeout(choice,1000);
+  let $primaryRanNum = Math.floor(Math.random() * 150) + 1;
+  $.ajax({
+    url: "https://pokeapi.co/api/v2/pokemon/"+$primaryRanNum
+  }).then(
+    (data) => {
+    $('#sprite').attr('src', data.sprites.front_default);
+    $name = data.name;
+    $answer = data.name;
+    optionArray = [];
+    optionArray.push($name);
+    () => {
+        console.log('bad request');
+    }
+  })
 
+  pokeRandom();
+  pokeRandom();
+  //Had to delay the choice function because I was getting some refreshes showing only 1 or 2 choices but the array was still getting them and by the time the log completed they were there.
+  setTimeout(choice,600);
+
+}
+
+game(); // called for intial page load
 
 // click and win checks go down here
 // if user clicks name that matches
 
+$('#optionA').click(() => {
+  if ($('#optionA').text() === $answer) {
+    alert('You win.')
+
+    game();
+  } else {
+    alert('Incorrect. Try Again.')
+  }
+})
+$('#optionB').click(() => {
+  if ($('#optionB').text() === $answer) {
+    alert('You win.')
+    game();
+  } else {
+    alert('Incorrect. Try Again.')
+  }
+})
+$('#optionC').click(() => {
+  if ($('#optionC').text() === $answer) {
+    alert('You win.')
+    game();
+  } else {
+    alert('Incorrect. Try Again.')
+  }
+})
 
 }) // end of jquery
 
