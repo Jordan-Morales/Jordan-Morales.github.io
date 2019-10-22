@@ -8,7 +8,7 @@ $(() => {
     (data) => {
       // console.log(data.moves);
     $('#sprite').attr('src', data.sprites.front_default);
-    $('#optionA').html(data.name)
+    $('#optionA').html(data.name);
     () => {
         console.log('bad request');
     }
