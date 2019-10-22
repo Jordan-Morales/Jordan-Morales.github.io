@@ -1,12 +1,22 @@
+* {
+  border: 2px black solid;
+}
+
+html {
+  background-image: url(../img/pokeball-background2.png);
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
 img {
-  height: 15vw;
-  width: 15vw;
+  height: 30vw;
+  width: 30vw;
   user-select: none;
   pointer-events: none;
 }
-
 #map, #home {
-  color: black;
+  color: white;
   margin-top: 0;
   padding-top: 0;
 }
@@ -15,7 +25,23 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 10vw;
+  background-color: darkred;
+  border-radius: 20px;
+}
+
+.container {
+  width: 80%;
+  align-self: center;
+  background-color: rgba(255,255,255,0.9);
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  height: 10vw;
 }
 
 
@@ -23,3 +49,24 @@ img {
 #sprite {
   filter: saturate(0%) brightness(40%) contrast(1500%);
 }
+
+/* //Responsive Design */
+
+
+@media (min-width: 520px) {
+  img {
+    height: 15vw;
+    width: 15vw;
+  }
+  button {
+    height: 6vw;
+  }
+}
+/*
+@media (min-width: 850px) {
+
+}
+
+@media (min-width: 1350px) {
+
+} */

@@ -1,10 +1,14 @@
-* {
+/* * {
   border: 2px black solid;
+} */
+html {
+  background-image: url(../img/pokeball-background2.png);
+
 }
 
-
 body {
-  width: 90%;
+  background-color: rgba(255,255,255,0.8);
+  font-family: 'Nanum Gothic', sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -17,7 +21,7 @@ img {
   border: solid 5px black;
 }
 #game, #home {
-  color: black;
+  color: white;
   margin-top: 0;
   padding-top: 0;
 }
@@ -26,21 +30,33 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: darkred;
+  border-radius: 20px;
   /* margin-left: 7%; */
 }
 
 .mapSection {
   align-self: center;
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 80vh;
+  max-width: 80vw;
   overflow: scroll;
 }
 h3 {
   text-align: center;
   width: 100%;
+  background-color: white;
 }
 
 // Responsive Design
+
+/* @media (min-width: 520px) {
+}
+@media (min-width: 850px) {
+}
+@media (min-width: 1350px) {
+} */
+
+ /* old test responsive not working  */
 /* @media (max-width: 519px) {
   .mapSection {
 
