@@ -109,7 +109,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 6vw;
+  font-size: 4.5vw;
 }
 #spriteDisplay {
   background-image: url(../img/image-background.png);
@@ -140,7 +140,7 @@ header {
 
 .containerBeta {
   height: 100%;
-  font-size: 6vw;
+  font-size: 4.5vw;
 }
 .additionalInfo {
   height: 100%

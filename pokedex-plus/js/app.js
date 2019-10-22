@@ -9,6 +9,7 @@ let $curID = parseInt($('#id').text());
     url: "https://pokeapi.co/api/v2/pokemon-species/"+$curID
   }).then((data) => {
     $('#growthRate').html(data.growth_rate.name);
+    aboutText(data);
   () => {
       console.log('bad request');
     }
@@ -36,6 +37,17 @@ const heightWeight = (data) => {
   $weight = ($weight / 10)
   $('#weight').empty()
   $('#weight').text($weight)
+}
+//working through soluction to post on En about info
+const aboutText = (data) => {
+
+
+  if (data.flavor_text_entries.some(flavor_text_entries => flavor_text_entries.language.name === "en")) {
+    $('#flavorText').html(data.flavor_text_entries.flavor_text);
+  }
+  else {
+   console.log('Thats a no go Houston');
+  }
 }
 /////////////////////////////////// Playing with Type Colors
 
