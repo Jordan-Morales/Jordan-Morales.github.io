@@ -13,7 +13,7 @@ $(() => {
   })
   }; // end of pokeRandom
 
-
+// brought back my shuffle technique from the deck of card stretch w02d03
 const shuffle = () => {
   let currentIndex = optionArray.length;
   let tempValue, randomIndex;
@@ -38,7 +38,6 @@ const choice = () => {
   $('#optionA').text(optionArray[0]);
   $('#optionB').text(optionArray[1]);
   $('#optionC').text(optionArray[2]);
-  console.log(optionArray);
 }
 
 //primary random number and ajax for displayed pokeShadow
@@ -49,7 +48,6 @@ $.ajax({
   url: "https://pokeapi.co/api/v2/pokemon/"+$primaryRanNum
 }).then(
   (data) => {
-    // console.log(data.moves);
   $('#sprite').attr('src', data.sprites.front_default);
   $name = data.name;
   optionArray.push($name);
@@ -66,7 +64,7 @@ setTimeout(choice,1000);
 // if user clicks name that matches
 
 
-})
+}) // end of jquery
 
 
 
@@ -84,3 +82,5 @@ setTimeout(choice,1000);
   //     $('#optionB').text(optionArray[1])
   //     $('#optionC').text(optionArray[2])
   // }
+
+  // console.log(optionArray);

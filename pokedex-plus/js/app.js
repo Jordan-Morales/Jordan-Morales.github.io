@@ -40,14 +40,15 @@ const heightWeight = (data) => {
 }
 //working through soluction to post on En about info
 const aboutText = (data) => {
-
-
-  if (data.flavor_text_entries.some(flavor_text_entries => flavor_text_entries.language.name === "en")) {
-    $('#flavorText').html(data.flavor_text_entries.flavor_text);
+for (var i = 0; i < data.flavor_text_entries.length; i++) {
+  if (data.flavor_text_entries[i].language.name === "en") {
+    $('#flavorText').html(data.flavor_text_entries[i].flavor_text);
+    break;
   }
   else {
    console.log('Thats a no go Houston');
   }
+}
 }
 /////////////////////////////////// Playing with Type Colors
 
@@ -91,7 +92,6 @@ const aboutText = (data) => {
         url: "https://pokeapi.co/api/v2/pokemon/"+$userInput
       }).then(
         (data) => {
-          // console.log(data.moves);
         $('#sprite').attr('src', data.sprites.front_default)
         $('#id').html(data.id);
         $('#name').html(data.name);
@@ -185,6 +185,7 @@ const aboutText = (data) => {
 //     console.log('bad request');
 //   }
 // })
+// console.log(data.moves);
 
 
 
