@@ -60,8 +60,8 @@ input[type=text] {
   text-align: center;
 }
 input[type=submit] {
-  width: 5vw;
-  height: 5vw;
+  width: 10vw;
+  height: 10vw;
   font-size: 3vw;
   display: flex;
   justify-content: center;
@@ -194,6 +194,8 @@ header {
   }
   input[type=submit] {
     font-size: 2.6vw;
+    width: 7vw;
+    height: 7vw;
   }
   .display {
     width: 75%;
@@ -231,6 +233,8 @@ header {
   }
   input[type=submit] {
     font-size: 1.6vw;
+    width: 5vw;
+    height: 5vw;
   }
   .display {
     width: 55%;
