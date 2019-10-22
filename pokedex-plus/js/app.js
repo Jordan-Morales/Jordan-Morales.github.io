@@ -101,18 +101,19 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
         () => {
             console.log('bad request');
         }
-        $('#pokedexCover').remove();
 
         let gone = () => {
+          $('#pokedexCover').css({'opacity': '0', 'transition': 'opacity .3s'})
+          setTimeout(() => {
+            $('#pokedexCover').hide();
+          }, 400);
           $('.containAll').css('display', 'flex');
           $('#display').show();
           $('button').show('slow');
-          $('#sprite').slideDown(100);
-          $('#spriteDisplay').show(400);
+          $('#sprite').slideDown(300);
+          $('#spriteDisplay').show(300);
         }
         gone();
-        // setTimeout(gone, 900)
-
       })
   }); //closing input click
 
