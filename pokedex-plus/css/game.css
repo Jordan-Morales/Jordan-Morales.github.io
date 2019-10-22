@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 2px black solid;
-}
+} */
 
 html {
   background-image: url(../img/pokeball-background2.png);
@@ -42,6 +42,11 @@ img {
 }
 button {
   height: 10vw;
+  color: white;
+  background-color: darkred;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 4vw;
 }
 
 
