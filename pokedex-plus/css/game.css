@@ -22,5 +22,4 @@ img {
 /* this will filter image to be a solid black, making it useable for guess that pokemon*/
 #sprite {
   filter: saturate(0%) brightness(40%) contrast(1500%);
-
 }

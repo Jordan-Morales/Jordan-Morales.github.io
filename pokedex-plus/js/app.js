@@ -105,10 +105,10 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
 
         let gone = () => {
           $('.containAll').css('display', 'flex');
-          $('#spriteDisplay').show(50);
-          $('#display').show(100);
+          $('#display').show();
           $('button').show('slow');
           $('#sprite').slideDown(100);
+          $('#spriteDisplay').show(400);
         }
         gone();
         // setTimeout(gone, 900)
