@@ -18,6 +18,7 @@ const types = (data) => {
   $('#type2').empty();
   if (data.types.length === 1) {
     $('#type').html(data.types[0].type.name);
+    // colored();
   }
   else {
     $('#type').html(data.types[0].type.name);
@@ -45,7 +46,6 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
     break;
   }
   else {
-   console.log('Thats a no go Houston');
   }
 }
 }
@@ -53,14 +53,17 @@ for (var i = 0; i < data.flavor_text_entries.length; i++) {
 
 // Trying to modify background behind type to become coloured depending on pl
 // const colored = () => {
-// let type1 = $('#type').value;
-// if (type1 === "normal") {
-// $('#type').css('background-color', 'grey')
-// } else if (type1 === "flying") {
-// $('#type').css('background-color', 'purple')
-// }
-//
-// switch (type1) {
+// // let $type1 = $('#type').val;
+// // if ($type1 === "normal") {
+// // $('#type').css('background-color', 'grey')
+// // } else if ($type1 === 'flying') {
+// // $('#type').css('background-color', 'purple')
+// // } else {
+// //   console.log('nothing');
+// // }
+// // }
+// //
+// switch ($('#type').val) {
 //   case 'normal':
 //     $('#type').css('background-color', 'grey')
 //     break;

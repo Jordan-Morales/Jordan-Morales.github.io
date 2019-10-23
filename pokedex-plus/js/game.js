@@ -15,19 +15,19 @@ $(() => {
 let $answer = '';
 
 // brought back my shuffle technique from the deck of card stretch w02d03
-const shuffle = () => {
-  let currentIndex = optionArray.length;
-  let tempValue, randomIndex;
-
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    tempValue = optionArray[currentIndex];
-    optionArray[currentIndex] = optionArray[randomIndex];
-    optionArray[randomIndex] = tempValue;
-  }
-  return optionArray;
-}
+// const shuffle = () => {
+//   let currentIndex = optionArray.length;
+//   let tempValue, randomIndex;
+//
+//   while (0 !== currentIndex) {
+//     randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex -= 1;
+//     tempValue = optionArray[currentIndex];
+//     optionArray[currentIndex] = optionArray[randomIndex];
+//     optionArray[randomIndex] = tempValue;
+//   }
+//   return optionArray;
+// }
 
 //getting the other two options into the array
 
@@ -58,14 +58,11 @@ const game = () => {
         console.log('bad request');
     }
   })
-
   pokeRandom();
   pokeRandom();
   //Had to delay the choice function because I was getting some refreshes showing only 1 or 2 choices but the array was still getting them and by the time the log completed they were there.
   setTimeout(choice,800);
-
 }
-
 game()
 
 // click and win checks go down here
